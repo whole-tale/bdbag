@@ -145,7 +145,7 @@ def get_file(url, output_path, auth_config, **kwargs):
                     logger.info('Agave OAuth token expired! Refreshing...')
                     if not refresh_token(auth):
                         continue
-                    update_agave_config(config_dict, agave_config_path, auth, auth_name)
+                    update_agave_config(config_dict, agave_config_path, auth, auth['client_name'])
 
                 # Attempt download
                 headers = {'Authorization': 'Bearer %s' % auth['access_token']}
@@ -160,3 +160,14 @@ def get_file(url, output_path, auth_config, **kwargs):
 
 
 agave_tenants = get_tenants()
+
+if __name__ == '__main__':
+    keychain = read_keychain()
+    test_result = get_file(
+        'https://agave.designsafe-ci.org/files/v2/media/system/designsafe.storage.published//PRJ-2528/Wright_Reaserchpaper.pdf',
+        '/home/elias/bdbag_test/Wright_Reaserchpaper.pdf',
+        keychain, # Can't have a None here... even for testing
+        code='designsafe',
+        config=read_config(DEFAULT_CONFIG_FILE)
+    )
+    print(test_result)
