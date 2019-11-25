@@ -69,6 +69,9 @@ DEFAULT_FETCH_CONFIG = {
         "read_chunk_size": 10 * Megabyte,
         "read_timeout_seconds": 120,
         "max_read_retries": 5
+    },
+    "agave": {
+        "config_file_path": "~/.agave/config.json"
     }
 }
 

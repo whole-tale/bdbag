@@ -34,7 +34,7 @@ class BaseTest(unittest.TestCase):
             self.assertRaisesRegex = self.assertRaisesRegexp
 
         self.tmpdir = tempfile.mkdtemp(prefix="bdbag_test_")
-        shutil.copytree(os.path.abspath(os.path.join('test', 'test-data')), os.path.join(self.tmpdir, 'test-data'))
+        shutil.copytree(os.path.abspath(os.path.join('test-data')), os.path.join(self.tmpdir, 'test-data'))
 
         self.test_data_dir = os.path.join(self.tmpdir, 'test-data', 'test-dir')
         self.assertTrue(os.path.isdir(self.test_data_dir))
@@ -69,6 +69,8 @@ class BaseTest(unittest.TestCase):
         self.assertTrue(os.path.isdir(self.test_bag_fetch_ftp_dir))
         self.test_bag_fetch_auth_dir = os.path.join(self.tmpdir, 'test-data', 'test-bag-fetch-ftp-auth')
         self.assertTrue(os.path.isdir(self.test_bag_fetch_auth_dir))
+        self.test_bag_fetch_agave_dir = os.path.join(self.tmpdir, 'test-data', 'test-bag-fetch-agave')
+        self.assertTrue(os.path.isdir(self.test_bag_fetch_agave_dir))
         self.test_bag_invalid_structure_manifest_dir = os.path.join(
             self.tmpdir, 'test-data', 'test-bag-invalid-structure-manifest')
         self.assertTrue(os.path.isdir(self.test_bag_invalid_structure_manifest_dir))

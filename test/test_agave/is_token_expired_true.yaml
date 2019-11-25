@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer EXPIRED_ACCESS_TOKEN
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://agave.designsafe-ci.org/profiles/v2/me
+  response:
+    body:
+      string: '{"fault":{"code":900901,"message":"Invalid Credentials","description":"Access
+        failure for API: /profiles/v2, version: v2 with key: EXPIRED_ACCESS_TOKEN.
+        Make sure your have given the correct access token"}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization, Content-Range,
+        Range
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 04 Nov 2019 15:58:39 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Server:
+      - WSO2-PassThrough-HTTP
+      Transfer-Encoding:
+      - chunked
+      WWW-Authenticate:
+      - OAuth2 realm="WSO2 API Manager"
+      X-Forwarded-For:
+      - 172.17.0.1
+      X-Forwarded-Host:
+      - agave.designsafe-ci.org
+      X-Forwarded-Server:
+      - agave.designsafe-ci.org
+    status:
+      code: 401
+      message: Unauthorized
+version: 1
