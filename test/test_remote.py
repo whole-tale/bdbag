@@ -178,6 +178,15 @@ class TestRemoteAPI(BaseTest):
         except Exception as e:
             self.fail(bdbag.get_typed_exception(e))
 
+    def test_resolve_fetch_agave(self):
+        logger.info(self.getTestHeader('test resolve fetch agave'))
+        try:
+            bdb.resolve_fetch(self.test_bag_fetch_agave_dir, cookie_scan=False)
+            bdb.validate_bag(self.test_bag_fetch_agave_dir, fast=True)
+            bdb.validate_bag(self.test_bag_fetch_agave_dir, fast=False)
+        except Exception as e:
+            self.fail(bdbag.get_typed_exception(e))
+
     def test_resolve_fetch_incomplete(self):
         logger.info(self.getTestHeader('test resolve fetch incomplete'))
         try:

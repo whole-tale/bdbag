@@ -1,0 +1,55 @@
+interactions:
+- request:
+    body: refresh_token=REFRESH_TOKEN&grant_type=refresh_token&scope=PRODUCTION
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic AUTH
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '87'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://agave.designsafe-ci.org/token
+  response:
+    body:
+      string: '{"scope":"default","token_type":"bearer","expires_in":14400,"refresh_token":"NEW_REFRESH_TOKEN","access_token":"NEW_ACCESS_TOKEN"}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization, Content-Range,
+        Range
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 04 Nov 2019 16:17:44 GMT
+      DeactivatedAccessToken:
+      - ACCESS_TOKEN
+      Keep-Alive:
+      - timeout=5, max=100
+      Pragma:
+      - no-cache
+      Server:
+      - WSO2-PassThrough-HTTP
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -101,6 +101,9 @@ def fetch_file(url, path, auth, **kwargs):
 
     scheme = urlsplit(url).scheme.lower()
     if SCHEME_HTTP == scheme or SCHEME_HTTPS == scheme:
+        is_agave, code = fetch_agave.detect_agave(url)
+        if is_agave:
+            return fetch_agave.get_file(url, path, auth, code=code, **kwargs)
         return fetch_http.get_file(url, path, auth, **kwargs)
     if SCHEME_FTP == scheme:
         return fetch_ftp.get_file(url, path, auth, **kwargs)

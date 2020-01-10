@@ -1,0 +1,101 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer VALID_ACCESS_TOKEN
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://agave.designsafe-ci.org/profiles/v2/me
+  response:
+    body:
+      string: '{"status":"success","message":"User details retrieved successfully.","version":"2.0.0-SNAPSHOT-rc3fad","result":{"first_name":"User","last_name":"UserLastName","full_name":"username","email":"username@example.com","phone":"","mobile_phone":"","status":"","create_time":"20190204174859Z","uid":855802,"username":"username"}}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization, Content-Range,
+        Range
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Allow:
+      - GET, PUT, DELETE, HEAD, OPTIONS
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 18 Nov 2019 15:17:43 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Server:
+      - WSO2-PassThrough-HTTP
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer VALID_ACCESS_TOKEN
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://agave.designsafe-ci.org/files/v2/media/system/designsafe.storage.published//PRJ-0000/test_file.pdf
+  response:
+    body:
+      string: !!binary |
+        TEST
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization, Content-Range,
+        Range
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - Keep-Alive
+      Content-Disposition:
+      - inline; modification-date="Wed, 28 Aug 19 21:21:41 GMT"; filename=test_file.pdf
+      Content-Length:
+      - '4'
+      Content-Type:
+      - application/pdf;charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2019 15:17:43 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Last-Modified:
+      - Wed, 28 Aug 2019 21:21:41 GMT
+      Server:
+      - WSO2-PassThrough-HTTP
+      Vary:
+      - Accept-Charset,Accept-Encoding,Accept-Language,Accept
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,49 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer VALID_ACCESS_TOKEN
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://agave.designsafe-ci.org/profiles/v2/me
+  response:
+    body:
+      string: '{"status":"success","message":"User details retrieved successfully.","version":"2.0.0-SNAPSHOT-rc3fad","result":{"first_name":"FIRST_NAME","last_name":"LAST_NAME","full_name":"USERNAME","email":"USERNAME@example.com","phone":"","mobile_phone":"","status":"","create_time":"20190204174859Z","uid":855802,"username":"USERNAME"}}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization, Content-Range,
+        Range
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Allow:
+      - GET, PUT, DELETE, HEAD, OPTIONS
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 04 Nov 2019 15:53:07 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Server:
+      - WSO2-PassThrough-HTTP
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+    status:
+      code: 200
+      message: OK
+version: 1
